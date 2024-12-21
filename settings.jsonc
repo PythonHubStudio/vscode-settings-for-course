@@ -1,0 +1,133 @@
+{
+    // Настройки терминала
+    "terminal.integrated.cursorStyle": "line", // Устанавливает стиль курсора в терминале (линия, блок или подчеркивание).
+    "terminal.integrated.cursorBlinking": true, // Включает мигание курсора в терминале.
+    "terminal.integrated.cursorWidth": 2, // Определяет ширину курсора (актуально только для стиля "линия").
+    "terminal.integrated.fontSize": 18, // Размер шрифта в терминале.
+    // "terminal.integrated.enableFileLinks": "off", // Отключает автоматическое создание ссылок на файлы в терминале.
+    // "terminal.integrated.scrollback": 50, // Количество строк, хранимых в истории прокрутки терминала.
+    //"terminal.integrated.defaultProfile.windows": "Command Prompt", // ТОЛЬКО для Windows!!! - изменить PowerShell (PS) в терминале на командную строку (cmd).
+    
+    // Настройки редактора
+    "editor.minimap.enabled": false, // Отключает мини-карту (миниатюрное представление кода сбоку).
+    "editor.fontSize": 18, // Размер шрифта в редакторе.
+    "editor.find.seedSearchStringFromSelection": "selection", // По умолчанию подставляет выделенный текст в поле поиска.
+    "editor.autoClosingComments": "always", // Всегда автоматически закрывает комментарии.
+    "editor.autoClosingQuotes": "always", // Всегда автоматически закрывает кавычки.
+    "editor.definitionLinkOpensInPeek": true, // Открывает определения в режиме предварительного просмотра, а не в новом окне.
+    "explorer.autoReveal": false, // Отключает автоматическое раскрытие файлов в проводнике.
+    "workbench.list.openMode": "doubleClick",  // (резервная настройка если "explorer.autoReveal": false, не помогла) Отключает автоматическое раскрытие файлов в проводнике.
+    "editor.hover.delay": 1000, // Задержка в миллисекундах перед появлением всплывающих подсказок.
+    "editor.stickyScroll.enabled": false, // Отключает "липкую" прокрутку (фиксированные заголовки функций).
+    "editor.scrollbar.horizontal": "visible", // Всегда отображает горизонтальную полосу прокрутки.
+    "editor.scrollbar.vertical": "visible", // Всегда отображает вертикальную полосу прокрутки.
+    "editor.scrollbar.scrollByPage": true, // Полоса прокрутки перемещается на целую страницу.
+    "editor.selectionHighlight": false, // Отключает подсветку других вхождений выделенного текста.
+    "editor.unicodeHighlight.ambiguousCharacters": false, // Не подсвечивает неоднозначные символы Юникода.
+    "editor.unicodeHighlight.includeStrings": false, // Не подсвечивает символы Юникода в строковых литералах.
+    "search.defaultViewMode": "tree", // Устанавливает режим отображения результатов поиска в виде дерева.
+    "debug.inlineValues": "on", // Показывает значения переменных непосредственно в коде при отладке.
+    "debug.terminal.clearBeforeReusing": true, // Очищает терминал перед его повторным использованием.
+    "workbench.editor.enablePreview": false,  // Отключает предпросмотр файла при клике по файлу в Explorer
+
+
+    
+    // Отключение ненужных функций и прочее
+    "editor.accessibilitySupport": "off", // Отключает функции доступности (например, для экранных считывателей).
+    "editor.roundedSelection": false, // Отключает закругленные края выделения.
+    "window.density.editorTabHeight": "compact", // Использует компактные вкладки редактора.
+    "window.commandCenter": false, // Отключает центр команд в верхней части окна.
+    "explorer.compactFolders": false, // Отключает компактное представление папок в проводнике.
+    "workbench.startupEditor": "none", // Не открывает никакие редакторы при запуске.
+    "workbench.cloudChanges.autoResume": "off", // Отключает автоматическое возобновление облачных изменений.
+    "workbench.cloudChanges.continueOn": "off", // Отключает продолжение облачных изменений.
+    "workbench.enableExperiments": false, // Отключает экспериментальные функции редактора.
+    "workbench.quickOpen.closeOnFocusLost": false, // Не закрывает окно быстрого открытия при потере фокуса.
+    
+    // Настройки Git
+    // "git.autoRepositoryDetection": "subFolders", // Автоматически определяет репозитории в подкаталогах.
+    
+    // Настройки для Pylance и анализа кода
+    "python.languageServer": "Pylance", // Использует сервер Pylance.
+    "python.analysis.typeCheckingMode": "off", // Отключает строгую проверку типов.
+    "python.analysis.diagnosticMode": "workspace", // Анализирует весь рабочий каталог.
+    "python.analysis.autoSearchPaths": true, // Автоматически ищет пути для модулей.
+    "python.analysis.autoImportCompletions": true, // Включает автодополнение для импортов.
+    "python.analysis.importFormat": "absolute", // Использует абсолютный формат импортов.
+    "python.analysis.completeFunctionParens": true, // Автоматически добавляет скобки при автодополнении функций.
+
+
+    "python.analysis.autoFormatStrings": true, // Автоматически форматирует строки.
+    "python.analysis.indexing": true, // Включает индексацию для ускорения анализа.
+
+    // "python.analysis.inlayHints.variableTypes": true, // Включает отображение типов переменных.
+    // "python.analysis.inlayHints.functionReturnTypes": true, // Включает отображение типов возвращаемых значений функций.
+    
+    // Настройки форматирования Python
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter" // Использует Black для форматирования Python.
+    },
+    // Дополнительные настройки
+    "editor.inlineSuggest.showToolbar": "always", // Всегда показывает панель предложений.
+    "terminal.integrated.allowedLinkSchemes": [
+        "file",
+        "http",
+        "https",
+        "mailto",
+        "vscode",
+        "vscode-insiders",
+        "docker-desktop" // Разрешённые схемы ссылок в терминале.
+    ],
+    "files.autoSave": "afterDelay", // Автоматически сохраняет файлы после небольшой задержки.
+    "files.autoSaveDelay": 1000, // Секунда (1000 миллисекунд).
+
+
+// ##########################################################################################################
+    // Темы
+    "workbench.colorTheme": "Monokai", // Устанавливает цветовую тему Monokai.
+    "editor.tokenColorCustomizations": { // Кастомизация (настройка под себя) темы Monokai.
+        "[Monokai]": { // Настройка применяется только к теме Monokai (не ко всем подходит)(везде свои правила).
+            "textMateRules": [ // scope и settings - для применения одних настроек к группе свойств.
+                {
+                    "scope": [
+                        "keyword.control", // Для ключевых слов операторов (например, return, if, else)
+                        "keyword.operator", // Для операторов (например, =, +, *)
+                    ],
+                    "settings": {
+                        "foreground": "#fb7979", // Новый цвет (для изменения цвета - навести курсор)
+                        "fontStyle": "" // Если удалить кавычки и написать их опять - будет подсказка
+                    }
+                },
+            ],
+            "variables": "#e4e4e4", // Цвет переменных.
+            "types": "#4ad926", // Цвет названий Классов и модулей (Monokai их, к тому же, подчеркивает (удобно видеть где класс, а где имя функции)).
+            "functions": "#4ad926", // Цвет функций и методов классов.
+            //"comments": "#FF0000", // Цвет комментариев
+            //"keywords": "#FF0000", // Цвет ключевых слов, вроде def, lambda и тд.
+        }
+    },
+    "workbench.colorCustomizations": { // Доп. настройки цвета в редакторе.
+        // Цвет элементов в терминале.
+        "terminal.foreground": "#e5e4e4", // Текст.
+        "terminal.background": "#0e0e0e", // Фон.
+        "terminalCursor.foreground": "#cc0a0a", // Курсор.
+        "terminal.ansiBrightGreen": "#15e815", // Снизим яркость зеленого.
+        "terminal.ansiBrightRed": "#FF4500", // Для ошибок.
+        "terminal.ansiBrightBlue": "#1b71d4", // Путь.
+        // Изменение цвета элементов редактора (опять же, кастомизация темы Monokai).
+        "editor.background": "#151515", // Фон.
+        "editor.selectionBackground": "#87777785", // Цвет выделения.
+        "editor.lineHighlightBackground": "#343333", // Фон строки, на которой установлен курсор.
+        "editorCursor.foreground": "#FFCC00", // Цвет курсора.
+        "sideBar.background": "#080808", // Боковая панель (открытая панель действий).
+        "sideBar.foreground": "#b7c299", // Текст боковой панели (открытая панель действий).
+        "activityBar.background": "#202020", // Панель действий.
+        "activityBar.foreground": "#CCCCCC", // Элементы панели действий.
+        "statusBar.background": "#151515", // Панель статуса (внизу).
+        "statusBar.foreground": "#D3D3D3" // Элементы панели статуса.
+    },
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true, // Независимая цветовая палитра для типов скобок (разного цвета).
+    "editor.guides.bracketPairs": true, // Включает направляющие для парных скобок.
+    
+// #######################################################################################################
+}
